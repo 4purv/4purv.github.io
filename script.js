@@ -1,9 +1,5 @@
 const textArray = [
-    "Learning new things",
-    "Open Source Contributor",
-    "Linux Enthusiast",
-    "Cybersecurity Learner",
-    "Building Cool Things"
+    "Hello"
 ];
 
 let typeJsText = document.querySelector(".animatedText");
