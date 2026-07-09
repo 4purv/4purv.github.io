@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans Mono", monospace;
+}
+
+body{
+    overflow:hidden;
+}
+
+.mainbg{
+    width:100%;
+    height:100vh;
+}
+
+/* ---------- Background Image ---------- */
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:url("bg.jpg") center center/cover no-repeat;
+
+    z-index:-2;
+}
+
+/* Dark Overlay */
+
+.mainbg::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:-1;
+}
+
+/* ---------- Content ---------- */
+
+.content{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.content-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.contentheading{
+
+    font-size:24px;
+
+    padding:5px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+}
+
+.animatedText{
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+
+    min-height:30px;
+
+    text-shadow:0 0 6px rgba(255,255,255,.4);
+}
+
+.contentbtn{
+
+    width:160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.contentbtn a{
+
+    letter-spacing:.03em;
+
+    transition:.2s ease;
+
+    border-width:2px;
+}
+
+.contentbtn a:hover{
+
+    background:white;
+
+    color:black;
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+footer p{
+
+    color:white;
+}
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+footer a:hover{
+
+    color:#bbb;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:700px){
+
+.contentbtn{
+
+    width:230px;
+}
+
+.contentheading{
+
+    font-size:22px;
+}
+
+.animatedText{
+
+    font-size:16px;
+}
+
+}
