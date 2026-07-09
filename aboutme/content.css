@@ -1,0 +1,327 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans Mono", monospace;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+}
+
+/* ---------- Background Image (same as homepage) ---------- */
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:url("/bg.jpg") center center/cover no-repeat;
+
+    z-index:-2;
+}
+
+.pagebg::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:-1;
+}
+
+/* ---------- Layout ---------- */
+
+.pagewrap{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:60px 20px 80px;
+}
+
+.pageinner{
+
+    width:100%;
+
+    max-width:640px;
+}
+
+/* ---------- Nav ---------- */
+
+.pagenav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:50px;
+
+    font-size:15px;
+}
+
+.pagenav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    letter-spacing:.02em;
+}
+
+.pagenav a:hover{
+
+    color:#bbb;
+}
+
+/* ---------- About Me ---------- */
+
+.pagepfp{
+
+    margin-bottom:20px;
+}
+
+.pagepfp img{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid rgba(255,255,255,.25);
+}
+
+.pagetitle{
+
+    font-size:26px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    margin-bottom:6px;
+}
+
+.pagetagline{
+
+    font-size:16px;
+
+    opacity:.8;
+
+    margin-bottom:30px;
+}
+
+.pagebio p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    opacity:.92;
+}
+
+.pagelocation{
+
+    font-size:14px;
+
+    opacity:.7;
+
+    margin-top:10px;
+}
+
+.pagelinks{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin-top:25px;
+
+    font-size:14px;
+}
+
+.pagelinks a{
+
+    color:white;
+
+    text-decoration:underline;
+
+    text-underline-offset:3px;
+
+    opacity:.85;
+}
+
+.pagelinks a:hover{
+
+    opacity:1;
+}
+
+/* ---------- Blog listing ---------- */
+
+.blogheading{
+
+    font-size:26px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+}
+
+.blogsub{
+
+    font-size:15px;
+
+    opacity:.75;
+
+    margin-bottom:40px;
+}
+
+.postlist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+}
+
+.postitem .postdate{
+
+    font-size:13px;
+
+    opacity:.65;
+
+    margin-bottom:4px;
+}
+
+.postitem .posttitle{
+
+    font-size:18px;
+
+    font-weight:500;
+}
+
+.postitem .posttitle a{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+.postitem .posttitle a:hover{
+
+    text-decoration:underline;
+
+    text-underline-offset:3px;
+}
+
+/* ---------- Single Post ---------- */
+
+.postheader{
+
+    margin-bottom:35px;
+}
+
+.postheader .posttitle{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    margin-bottom:8px;
+}
+
+.postheader .postdate{
+
+    font-size:14px;
+
+    opacity:.65;
+}
+
+.postbody p{
+
+    font-size:15px;
+
+    line-height:1.85;
+
+    margin-bottom:20px;
+
+    opacity:.92;
+}
+
+.postbody h2{
+
+    font-size:19px;
+
+    font-weight:500;
+
+    margin:35px 0 15px;
+}
+
+/* ---------- Footer links (bottom of page/post) ---------- */
+
+.pagefooter{
+
+    margin-top:60px;
+
+    display:flex;
+
+    gap:16px;
+
+    font-size:14px;
+
+    opacity:.75;
+}
+
+.pagefooter a{
+
+    color:white;
+
+    text-decoration:underline;
+
+    text-underline-offset:3px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:700px){
+
+.pagetitle, .blogheading{
+
+    font-size:22px;
+}
+
+.pagewrap{
+
+    padding:40px 18px 60px;
+}
+
+}
