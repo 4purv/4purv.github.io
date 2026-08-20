@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Identity Gate</title>
+<link rel="shortcut icon" href="/aboutme/pfp.jpg" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/aboutme/content.css">
+
+</head>
+
+<body class="pagebg">
+
+<div class="background"></div>
+
+<div class="pagewrap">
+
+    <div class="pageinner">
+
+        <div class="pagenav">
+            <a href="/index.html">← home</a>
+            <a href="/project.html">← back to projects</a>
+        </div>
+
+        <div class="postheader">
+            <div class="posttitle">Identity Gate</div>
+            <div class="postdate">20th june 2026</div>
+        </div>
+
+        <div class="postbody">
+
+            <p>
+                This was a big project that took up most of my time throughout the semester.
+            </p>
+            <p>            
+                The main idea of this project was to build a facial recognition system for a residential 
+                society to determine whether the person driving a resident's vehicle is authorized to 
+                drive it or not. If the person is authorized, the gates would open. If not, a notification 
+                containing a photo of the driver would be sent to the respective owner of the vehicle.
+            </p>
+            <p>
+                Now, to actually identify which vehicle we're talking about, we took inspiration from 
+                an already existing technology called ANPR (Automatic Number Plate Recognition).
+            </p>
+            <p>
+                We didn't actually use this technology, though, as the cameras and software required 
+                were expensive. I also didn't want to build an entire database for vehicle recognition, 
+                so we decided to focus specifically on the facial recognition part.
+            </p>
+            <p>
+                Now, for the actual system architecture:
+            </p>
+            <p>
+                I used YOLOv8 to detect faces and FaceNet through DeepFace for facial recognition. 
+                I then used Flask with ngrok to send requests from the main system to a PWA 
+                (Progressive Web App) for notifications, which was also hosted through ngrok.
+            </p>
+            <p>
+                The database is stored locally. If a driver's face is not recognized, their photo is 
+                temporarily stored in a file and sent as a request to the vehicle owner's device. 
+                However, the photo is also retained on the main PC.
+
+            </p>
+        </div>
+
+        <div class="pagefooter">
+            <a href="https://github.com/4purv/Identity-Gate">github</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
